@@ -1,4 +1,603 @@
-_         x c h a n g e
-_         n e r g y
-_         x p r e s s
-          v e r y t h i n g  f e s t i v a l 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything Festival | Bodies in Space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue-light: #a8c7e9;
+            --blue-medium: #6a9cd2;
+            --blue-dark: #3a6ea5;
+            --red: #ff3a2f;
+            --yellow: #ffd166;
+            --text-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Mono', monospace;
+            background: linear-gradient(135deg, var(--blue-medium) 0%, #9370db 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .logo-container {
+            max-width: 300px;
+            margin: 0 auto 2rem;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .date-time {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-style: italic;
+        }
+
+        .section {
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .program-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .program-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 2rem;
+            flex: 1 1 45%;
+            min-width: 300px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .program-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .program-item {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .program-time {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .program-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .program-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .all-day {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .all-day h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .all-day ul {
+            list-style-type: none;
+        }
+
+        .all-day li {
+            margin-bottom: 0.5rem;
+        }
+
+        .manifesto {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .manifesto p {
+            margin-bottom: 2rem;
+        }
+
+        .ticket-info {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 4rem auto;
+            text-align: center;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .ticket-info p {
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--red);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Animation for the logo */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .animate-logo {
+            animation: pulse 4s infinite ease-in-out;
+        }
+
+        .artists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .artist-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .artist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .artist-emoji {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .artist-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .artist-role {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .special-text {
+            font-family: 'Courier Prime', monospace;
+            letter-spacing: 1px;
+        }
+
+        .family-friendly {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .family-friendly span {
+            margin-right: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .program-container {
+                flex-direction: column;
+            }
+            
+            .program-card {
+                flex: 1 1 100%;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .manifesto {
+                font-size: 1rem;
+            }
+
+            .artists-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container animate-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-22%20at%2022.38.40-IcozG9Iv2UECWRIZYwcuK2LKtIxnAQ.jpeg" alt="Everything Festival Logo">
+            </div>
+            <h1>⟢ Everything Festival ⟢</h1>
+            <div class="date-time">Sunday May 4th, 2025 • 10am to 10pm</div>
+            <div class="tagline">Bodies in Space presents a one-day festival of rhythm, rest, and resonance</div>
+            <div class="special-text">✦⟢༚☾🌀⟢☼༚✦</div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="manifesto">
+                <p>Bodies in Space is delighted to kick off the first edition of ⟢ everything festival ⟢<br>
+                a full day of programming centered on community co-creation, restorative practices, and freaky frequency exploration.</p>
+                
+                <p>In a world that moves too fast, rituals slow us down. They ask us to feel—to remember what it means to be here, together, alive.</p>
+                
+                <p>We're organising this to make space for artists we deeply respect—to support their work, and to spark the kind of unexpected resonances that happen when curious minds and open bodies gather in shared time. There will be... a bit of everything ✧₊⁺</p>
+                
+                <p>The future won't be built by action alone but by rhythm, by intention, by collective pause & creation.</p>
+                
+                <p>And there we meet: in the ritual, in the in-between, in the pulse beneath the surface, in the long inhale of a world trying to remember how to breathe.</p>
+                
+                <p class="special-text">➿!! ➿!! <strong>exchange energy, express everything</strong> !! ➿!! ➿</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="section">
+        <div class="container">
+            <h2 class="section-title">Programs</h2>
+            <div class="program-container">
+                <div class="program-card">
+                    <h3>Energy Program</h3>
+                    <div class="program-item">
+                        <div class="program-time">10h</div>
+                        <div class="program-title">Coffee tasting by Tropidelico</div>
+                        <div class="program-description">Herbal infusions by Elsa</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-time">12h</div>
+                        <div class="program-title">Qigong by Alessio Porcelli</div>
+                        <div class="program-description">+ move, breath, cultivate qi</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-time">13h</div>
+                        <div class="program-title">BIS resident performance</div>
+                        <div class="program-description">+ xxx tbd</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-time">14h</div>
+                        <div class="program-title">Sound healing + group hypnosis</div>
+                        <div class="program-description">+ by energy&medicine and Spectral Center</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-time">15h</div>
+                        <div class="program-title">Yoga by Yeye</div>
+                        <div class="program-description">+ guided flow with music</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-time">16h</div>
+                        <div class="program-title">BIS resident performance</div>
+                        <div class="program-description">+ xxx tbd</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-time">17h</div>
+                        <div class="program-title">Lucid Dance Lab by Lengelhair + NIXIE</div>
+                        <div class="program-description">+ experimental dance session + DJ set</div>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <h3>Music Program</h3>
+                    <h4>DJ</h4>
+                    <div class="program-item">
+                        <div class="program-title">Julia Dyck</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-title">Seb (Rebel Up)</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-title">YEYE</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-title">Lengelhair</div>
+                    </div>
+                    
+                    <h4 style="margin-top: 2rem;">Live</h4>
+                    <div class="program-item">
+                        <div class="program-title">ROTA</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-title">womb</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-title">Dragan Markovic</div>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-title">Rafael Aragon</div>
+                    </div>
+                    
+                    <div class="all-day">
+                        <h4>All Day</h4>
+                        <ul>
+                            <li>Sourdough pizza by L'Arne della pizza</li>
+                            <li>Vegan food by Toestand</li>
+                            <li>Tasty beer, natural wine, and softs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">The Experience</h2>
+            <div class="manifesto">
+                <p>From 10am to 10pm, the club becomes will become:</p>
+                <p>➺ a soft lab for somatic sessions—yoga, qigong, group hypnosis, sound healing, lucid dance<br>
+                ➺ and a testing ground for live electronics, A/V installations, performances, and DJ sets<br>
+                ➺ our mini-cinema will be quietly looping experimental short films in the heart of the building.</p>
+                
+                <p>Come early, open your hearts wiiide (♡⌒▽⌒♡), stretch and exhale-expand-evolve into everything festival.</p>
+                
+                <p>To keep your body fueled day into night:<br>
+                ▪homemade pizzas<br>
+                ▪nourishing vegan food<br>
+                ▪coffee & tea tastings<br>
+                ▪natural wine</p>
+                
+                <p>A day for wandering minds and somatic bodies. To pause. To recalibrate. To connect. To feel what wants to move next.</p>
+                
+                <p>From 10 to 10. Come early. Stay long. Bring your soft animal body.</p>
+                
+                <div class="family-friendly">
+                    <span>/)/) <br>( . .) <br>( づ♡</span> family-friendly
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="artists" class="section">
+        <div class="container">
+            <h2 class="section-title">Artists & Facilitators</h2>
+            <div class="manifesto">
+                <p>Here are the artists, facilitators, and a/v tinkerers shaping this first edition</p>
+            </div>
+            <div class="artists-grid">
+                <div class="artist-card">
+                    <span class="artist-emoji">࿔</span>
+                    <div class="artist-name">Nixie / energy8medicine</div>
+                    <div class="artist-role">Sound healing</div>
+                </div>
+                <div class="artist-card">
+                    <span class="artist-emoji">🌀</span>
+                    <div class="artist-name">Julia Dyck / Spectral Center</div>
+                    <div class="artist-role">Group hypnosis</div>
+                </div>
+                <div class="artist-card">
+                    <span class="artist-emoji">❀</span>
+                    <div class="artist-name">Yeye</div>
+                    <div class="artist-role">Yoga</div>
+                </div>
+                <div class="artist-card">
+                    <span class="artist-emoji">🌐</span>
+                    <div class="artist-name">ROTA</div>
+                    <div class="artist-role">A/V installations</div>
+                </div>
+                <div class="artist-card">
+                    <span class="artist-emoji">⟢</span>
+                    <div class="artist-name">Rebel Up</div>
+                    <div class="artist-role">DJ set</div>
+                </div>
+                <div class="artist-card">
+                    <span class="artist-emoji">⚡</span>
+                    <div class="artist-name">Womb</div>
+                    <div class="artist-role">Live electronics</div>
+                </div>
+                <div class="artist-card">
+                    <span class="artist-emoji">☕</span>
+                    <div class="artist-name">Tropidelico</div>
+                    <div class="artist-role">Coffee tasting</div>
+                </div>
+                <div class="artist-card">
+                    <span class="artist-emoji">❇</span>
+                    <div class="artist-name">Alessio Porcelli</div>
+                    <div class="artist-role">Qigong</div>
+                </div>
+                <div class="artist-card">
+                    <span class="artist-emoji">🌱</span>
+                    <div class="artist-name">Toestand</div>
+                    <div class="artist-role">Vegan snacks</div>
+                </div>
+                <div class="artist-card">
+                    <span class="artist-emoji">𓀤</span>
+                    <div class="artist-name">Nixie + Lengelhair</div>
+                    <div class="artist-role">Lucid dance</div>
+                </div>
+                <div class="artist-card">
+                    <span class="artist-emoji">𖤐</span>
+                    <div class="artist-name">L'Arne della pizza</div>
+                    <div class="artist-role">Sourdough pizza</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tickets" class="section">
+        <div class="container">
+            <div class="ticket-info">
+                <h2 class="section-title">Tickets</h2>
+                <p>This isn't just an event. It's a shared field. A full-day weaving of care, presence, and expression.</p>
+                <p>We've kept the entry at:</p>
+                <div class="price">15€</div>
+                <p>Not because that reflects the value, but because we want to keep the threshold soft and open.</p>
+                <p>We're not here to scale. We're here to offer something real.</p>
+                <p>Your contribution helps sustain not just the artists, the space, but the many hands, hearts, and frequencies behind it.</p>
+                <p>If you feel called to give more, we welcome it. But mostly we're just glad you'll be with us.</p>
+                <a href="https://ypl.me/Ib7/t" class="btn" id="ticketBtn" target="_blank">Find Tickets</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Bodies in Space presents: ⟢ Everything Festival ⟢</p>
+            <p>Sunday May 4th, 2025 • 10am to 10pm</p>
+            <p class="special-text">✦⟢༚☾🌀⟢☼༚✦</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll animation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Ticket button animation
+        const ticketBtn = document.getElementById('ticketBtn');
+        ticketBtn.addEventListener('mouseover', () => {
+            ticketBtn.style.backgroundColor = '#ff6347';
+        });
+        ticketBtn.addEventListener('mouseout', () => {
+            ticketBtn.style.backgroundColor = 'var(--red)';
+        });
+        
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            document.body.style.backgroundPosition = `0px ${scrollPosition * 0.05}px`;
+        });
+        
+        // Add fade-in animation for sections
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+        
+        // Artist card hover effects
+        document.querySelectorAll('.artist-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+        });
+    </script>
+</body>
+</html>
