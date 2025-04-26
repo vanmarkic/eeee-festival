@@ -28,6 +28,7 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -207,6 +208,27 @@ footer {
   opacity: 0.8;
 }
 
+.social-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
 /* Simplified animation for the logo */
 @keyframes pulse {
   0% {
@@ -322,6 +344,7 @@ footer {
   img {
     max-width: 100%;
     height: auto;
+    display: block;
   }
   #ticketBtn {
     background-color: var(--red);

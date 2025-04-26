@@ -3,7 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Everything Festival | Bodies in Space</title>
+    <title>Everything Festival | Bodies in Space | Brussels 2025</title>
+    <meta
+      name="description"
+      content="Everything Festival: A one-day festival of rhythm, rest, and resonance in Brussels. Join us for sound healing, yoga, live music, and more on May 4th, 2025."
+    />
+    <meta
+      name="keywords"
+      content="everything festival, bodies in space, brussels, festival, sound healing, yoga, live music, community, art"
+    />
+    <meta name="author" content="Bodies in Space" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://eeee-festival.be/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eeee-festival.be/" />
+    <meta
+      property="og:title"
+      content="Everything Festival | Bodies in Space | Brussels 2025"
+    />
+    <meta
+      property="og:description"
+      content="A one-day festival of rhythm, rest, and resonance in Brussels. Join us for sound healing, yoga, live music, and more on May 4th, 2025."
+    />
+    <meta property="og:image" content="https://eeee-festival.be/main.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://eeee-festival.be/" />
+    <meta
+      property="twitter:title"
+      content="Everything Festival | Bodies in Space | Brussels 2025"
+    />
+    <meta
+      property="twitter:description"
+      content="A one-day festival of rhythm, rest, and resonance in Brussels. Join us for sound healing, yoga, live music, and more on May 4th, 2025."
+    />
+    <meta property="twitter:image" content="https://eeee-festival.be/main.jpg" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -22,7 +69,11 @@
         </div>
         <div class="special-text">✦⟢༚☾🌀⟢☼༚✦</div>
         <div>
-          <img src="./main.jpg" alt="Everything Festival Logo" />
+          <img
+            src="./main.jpg"
+            alt="Everything Festival - Bodies in Space presents a one-day festival of rhythm, rest, and resonance in Brussels on May 4th, 2025"
+            loading="lazy"
+          />
         </div>
       </div>
     </header>
@@ -310,11 +361,76 @@
         <p>Bodies in Space presents: ⟢ Everything Festival ⟢</p>
         <p>Sunday May 4th, 2025 • 10am to 10pm</p>
         <p class="special-text">✦⟢༚☾🌀⟢☼༚✦</p>
-        <a href="https://maps.app.goo.gl/WXX4tVWpiXdRLQLi7" targer="_blank">
+        <a href="https://maps.app.goo.gl/WXX4tVWpiXdRLQLi7" target="_blank">
           <p>Chau. de Zellik 65, 1082 Berchem-Sainte-Agathe</p></a
         >
+        <div class="social-links">
+          <a
+            href="https://instagram.com/bodiesinspace.bis/"
+            target="_blank"
+            aria-label="Instagram"
+            >Instagram</a
+          >
+          <a href="mailto:dana@miauw.be" aria-label="Email">Contact</a>
+        </div>
       </div>
     </footer>
+
+    <!-- Structured Data for Event -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Everything Festival",
+        "description": "Bodies in Space presents a one-day festival of rhythm, rest, and resonance. A full day of programming centered on community co-creation, restorative practices, and freaky frequency exploration.",
+        "image": "https://eeee-festival.be/main.jpg",
+        "startDate": "2025-05-04T10:00",
+        "endDate": "2025-05-04T22:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Berchem-Sainte-Agathe",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Chau. de Zellik 65",
+            "addressLocality": "Berchem-Sainte-Agathe",
+            "postalCode": "1082",
+            "addressCountry": "BE"
+          }
+        },
+        "performer": [
+          {
+            "@type": "PerformingGroup",
+            "name": "Nixie / energy8medicine"
+          },
+          {
+            "@type": "PerformingGroup",
+            "name": "Julia Dyck / Spectral Center"
+          },
+          {
+            "@type": "PerformingGroup",
+            "name": "Rebel Up"
+          },
+          {
+            "@type": "PerformingGroup",
+            "name": "Womb"
+          }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://ypl.me/Ib7/t",
+          "price": "15",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Bodies in Space",
+          "url": "https://eeee-festival.be"
+        }
+      }
+    </script>
 
     <script>
       // Simple scroll animation

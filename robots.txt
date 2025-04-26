@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://eeee-festival.be/sitemap.xml
