@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Everything Festival | Bodies in Space</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
     <style>
       @font-face {
         font-family: "Euripides";
@@ -36,7 +30,7 @@
       }
 
       body {
-        font-family: "Euripides", "Space Mono", monospace;
+        font-family: "Euripides", monospace;
         background: linear-gradient(135deg, var(--blue-medium) 0%, #b8a9d6 100%);
         color: var(--text-color);
         line-height: 1.6;
@@ -65,7 +59,7 @@
       }
 
       h1 {
-        font-family: "Euripides", "Space Mono", monospace;
+        font-family: "Euripides", monospace;
         font-size: 2.5rem;
         margin-bottom: 1rem;
         text-transform: uppercase;
@@ -90,7 +84,7 @@
       }
 
       .section-title {
-        font-family: "Euripides", "Space Mono", monospace;
+        font-family: "Euripides", monospace;
         text-align: center;
         font-size: 2rem;
         margin-bottom: 3rem;
@@ -189,7 +183,7 @@
       }
 
       .price {
-        font-size: 2rem;
+        font-size: 4rem;
         font-weight: bold;
         margin: 1rem 0;
       }
@@ -250,12 +244,17 @@
         padding: 1.5rem;
         transition: all 0.2s ease;
         border: 1px solid rgba(255, 255, 255, 0.15);
+        color: var(--text-color);
+        text-decoration: none;
+        display: block;
       }
 
       .artist-card:hover {
         transform: translateY(-3px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
         border-color: rgba(255, 255, 255, 0.2);
+        text-decoration: none;
+        color: var(--text-color);
       }
 
       .artist-emoji {
@@ -276,7 +275,7 @@
       }
 
       .special-text {
-        font-family: "Euripides", "Courier Prime", monospace;
+        font-family: "Euripides", monospace;
         letter-spacing: 1px;
       }
 
@@ -317,6 +316,20 @@
         .artists-grid {
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         }
+
+        body {
+          overflow-x: hidden;
+        }
+
+        .container {
+          padding: 0 15px;
+          width: 100%;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
       }
     </style>
   </head>
@@ -336,10 +349,7 @@
         </div>
         <div class="special-text">✦⟢༚☾🌀⟢☼༚✦</div>
         <div>
-          <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-22%20at%2022.38.40-IcozG9Iv2UECWRIZYwcuK2LKtIxnAQ.jpeg"
-            alt="Everything Festival Logo"
-          />
+          <img src="./main.jpg" alt="Everything Festival Logo" />
         </div>
       </div>
     </header>
@@ -354,61 +364,65 @@
           </p>
         </div>
         <div class="artists-grid">
-          <div class="artist-card">
+          <a
+            href="https://instagram.com/energy8medicine"
+            target="_blank"
+            class="artist-card"
+          >
             <span class="artist-emoji">࿔</span>
             <div class="artist-name">Nixie / energy8medicine</div>
             <div class="artist-role">Sound healing</div>
-          </div>
-          <div class="artist-card">
+          </a>
+          <a target="_blank" class="artist-card">
             <span class="artist-emoji">🌀</span>
             <div class="artist-name">Julia Dyck / Spectral Center</div>
             <div class="artist-role">Group hypnosis</div>
-          </div>
-          <div class="artist-card">
+          </a>
+          <div target="_blank" class="artist-card">
             <span class="artist-emoji">❀</span>
             <div class="artist-name">Yeye</div>
             <div class="artist-role">Yoga</div>
           </div>
-          <div class="artist-card">
+          <a target="_blank" class="artist-card">
             <span class="artist-emoji">🌐</span>
             <div class="artist-name">ROTA</div>
             <div class="artist-role">A/V installations</div>
-          </div>
-          <div class="artist-card">
+          </a>
+          <a href="https://rebelup.org" target="_blank" class="artist-card">
             <span class="artist-emoji">⟢</span>
             <div class="artist-name">Rebel Up</div>
             <div class="artist-role">DJ set</div>
-          </div>
-          <div class="artist-card">
+          </a>
+          <a href="https://soundcloud.com/womb-music" target="_blank" class="artist-card">
             <span class="artist-emoji">⚡</span>
             <div class="artist-name">Womb</div>
             <div class="artist-role">Live electronics</div>
-          </div>
-          <div class="artist-card">
+          </a>
+          <a target="_blank" class="artist-card">
             <span class="artist-emoji">☕</span>
             <div class="artist-name">Tropidelico</div>
             <div class="artist-role">Coffee tasting</div>
-          </div>
-          <div class="artist-card">
+          </a>
+          <a target="_blank" class="artist-card">
             <span class="artist-emoji">❇</span>
             <div class="artist-name">Alessio Porcelli</div>
             <div class="artist-role">Qigong</div>
-          </div>
-          <div class="artist-card">
+          </a>
+          <a href="https://toestand.be" target="_blank" class="artist-card">
             <span class="artist-emoji">🌱</span>
             <div class="artist-name">Toestand</div>
             <div class="artist-role">Vegan snacks</div>
-          </div>
-          <div class="artist-card">
+          </a>
+          <a target="_blank" class="artist-card">
             <span class="artist-emoji">𓀤</span>
             <div class="artist-name">Nixie + Lengelhair</div>
             <div class="artist-role">Lucid dance</div>
-          </div>
-          <div class="artist-card">
+          </a>
+          <a target="_blank" class="artist-card">
             <span class="artist-emoji">𖤐</span>
             <div class="artist-name">L'Arne della pizza</div>
             <div class="artist-role">Sourdough pizza</div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -612,7 +626,7 @@
             you'll be with us.
           </p>
           <a href="https://ypl.me/Ib7/t" class="btn" id="ticketBtn" target="_blank"
-            >Find Tickets</a
+            >Buy Tickets</a
           >
         </div>
       </div>
@@ -673,7 +687,7 @@
       });
 
       // Simplified artist card hover effects
-      document.querySelectorAll(".artist-card").forEach((card) => {
+      document.querySelectorAll("a.artist-card").forEach((card) => {
         card.addEventListener("mouseenter", () => {
           card.style.transform = "translateY(-3px)";
         });
