@@ -37,6 +37,27 @@ body {
   padding: 0 20px;
 }
 
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 1px rgba(255 255 255 / .2);
+  backdrop-filter: blur(1em);
+}
+.nav a {
+  display: block;
+  padding: .5em;
+  text-decoration: none;
+}
+
 header {
   padding: 2rem 0;
   text-align: center;
@@ -341,6 +362,7 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
   .program-container {
     flex-direction: column;
   }
@@ -405,5 +427,11 @@ footer {
   }
   .btn:hover {
     background-color: #d17370;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    display: none;
   }
 }
