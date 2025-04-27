@@ -54,22 +54,30 @@ header {
 
 h1 {
   font-family: "Euripides", monospace;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-weight: 600;
 }
 
 .date-time {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 .tagline {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   max-width: 800px;
   margin: 0 auto 2rem;
   font-style: italic;
+  font-weight: 400;
+}
+
+header a {
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .section {
@@ -80,10 +88,11 @@ h1 {
 .section-title {
   font-family: "Euripides", monospace;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.8rem;
   margin-bottom: 3rem;
   text-transform: uppercase;
   letter-spacing: 3px;
+  font-weight: 600;
 }
 
 .program-container {
@@ -104,10 +113,18 @@ h1 {
 }
 
 .program-card h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.program-card h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
 }
 
 .program-item {
@@ -116,18 +133,21 @@ h1 {
 }
 
 .program-time {
-  font-weight: bold;
+  font-weight: 600;
   margin-right: 10px;
+  font-size: 1.2rem;
 }
 
 .program-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-bottom: 0.3rem;
+  font-weight: 600;
 }
 
 .program-description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   opacity: 0.9;
+  font-weight: 400;
 }
 
 .all-day {
@@ -138,7 +158,8 @@ h1 {
 
 .all-day h4 {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .all-day ul {
@@ -147,14 +168,16 @@ h1 {
 
 .all-day li {
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .manifesto {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1.4rem;
+  line-height: 1.9;
+  font-weight: 400;
 }
 
 .manifesto p {
@@ -177,8 +200,8 @@ h1 {
 }
 
 .price {
-  font-size: 4rem;
-  font-weight: bold;
+  font-size: 5rem;
+  font-weight: 600;
   margin: 1rem 0;
 }
 
@@ -189,8 +212,9 @@ h1 {
   padding: 12px 30px;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   transition: all 0.2s ease;
   margin-top: 1rem;
@@ -204,7 +228,7 @@ h1 {
 footer {
   text-align: center;
   padding: 3rem 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
   opacity: 0.8;
 }
 
@@ -222,6 +246,7 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   transition: all 0.2s ease;
+  font-size: 1.1rem;
 }
 
 .social-links a:hover {
@@ -273,25 +298,28 @@ footer {
 }
 
 .artist-emoji {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   display: block;
 }
 
 .artist-name {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .artist-role {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   opacity: 0.9;
+  font-weight: 400;
 }
 
 .special-text {
   font-family: "Euripides", monospace;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .family-friendly {
@@ -299,11 +327,13 @@ footer {
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .family-friendly span {
   margin-right: 10px;
+  font-size: 1.3rem;
 }
 
 /* Responsive adjustments */
@@ -317,15 +347,39 @@ footer {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 
   .manifesto {
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .program-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .program-card h4 {
+    font-size: 1.6rem;
+  }
+
+  .program-title {
+    font-size: 1.2rem;
+  }
+
+  .program-time {
+    font-size: 1.1rem;
+  }
+
+  .artist-name {
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-size: 4.5rem;
   }
 
   .artists-grid {
