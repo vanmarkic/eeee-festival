@@ -61,16 +61,19 @@ h1 {
   font-weight: 600;
 }
 
+a {
+  color: inherit;
+}
+
 .date-time {
   font-size: 1.8rem;
-  margin-bottom: 2rem;
   font-weight: 600;
 }
 
 .tagline {
   font-size: 1.4rem;
   max-width: 800px;
-  margin: 0 auto 2rem;
+  margin: 1rem auto;
   font-style: italic;
   font-weight: 400;
 }
@@ -217,7 +220,6 @@ header a {
   font-size: 1.2rem;
   letter-spacing: 1px;
   transition: all 0.2s ease;
-  margin-top: 1rem;
 }
 
 .btn:hover {
@@ -320,6 +322,7 @@ footer {
   letter-spacing: 1.5px;
   font-size: 1.4rem;
   font-weight: 600;
+  margin: 1rem auto;
 }
 
 .family-friendly {
@@ -400,12 +403,7 @@ footer {
     height: auto;
     display: block;
   }
-  #ticketBtn {
-    background-color: var(--red);
-    transition: background-color 0.3s ease;
-  }
-
-  #ticketBtn:hover {
+  .btn:hover {
     background-color: #d17370;
   }
 }
