@@ -22,6 +22,15 @@
   box-sizing: border-box;
 }
 
+@keyframes pulse {
+  0%, to {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 body {
   font-family: "Euripides", monospace;
   background: linear-gradient(135deg, var(--blue-medium) 0%, #b8a9d6 100%);
@@ -74,7 +83,6 @@ header {
 }
 
 h1 {
-  font-family: "Euripides", monospace;
   font-size: 3.5rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -110,7 +118,6 @@ header a {
 }
 
 .section-title {
-  font-family: "Euripides", monospace;
   text-align: center;
   font-size: 2.8rem;
   margin-bottom: 3rem;
@@ -126,17 +133,25 @@ header a {
   gap: 2rem;
 }
 
-.program-card {
-  background: rgba(255, 255, 255, 0.08);
+.card {
+  background: rgba(255 255 255 / .08);
   border-radius: 8px;
   padding: 2rem;
   flex: 1 1 45%;
   min-width: 300px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 10px rgba(0 0 0 / .05);
+  border: 1px solid rgba(255 255 255 / .15);
+}
+.card--ticket {
+  max-width: 600px;
+  margin: 4rem auto;
+  text-align: center;
+}
+.card--ticket p {
+  margin-bottom: 1rem;
 }
 
-.program-card h3 {
+.card h3 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
@@ -144,7 +159,7 @@ header a {
   font-weight: 600;
 }
 
-.program-card h4 {
+.card h4 {
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
   font-weight: 600;
@@ -164,20 +179,20 @@ header a {
 
 .program-title {
   font-size: 1.3rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: .3rem;
   font-weight: 600;
 }
 
 .program-description {
   font-size: 1rem;
-  opacity: 0.9;
+  opacity: .9;
   font-weight: 400;
 }
 
 .all-day {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255 255 255 / .2);
 }
 
 .all-day h4 {
@@ -191,7 +206,7 @@ header a {
 }
 
 .all-day li {
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   font-size: 1.1rem;
 }
 
@@ -206,21 +221,6 @@ header a {
 
 .manifesto p {
   margin-bottom: 2rem;
-}
-
-.ticket-info {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  padding: 2rem;
-  max-width: 600px;
-  margin: 4rem auto;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.ticket-info p {
-  margin-bottom: 1rem;
 }
 
 .price {
@@ -240,19 +240,19 @@ header a {
   text-transform: uppercase;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  transition: all 0.2s ease;
+  transition: all .2s ease;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0 0 0 / .1);
 }
 
 footer {
   text-align: center;
   padding: 3rem 0;
   font-size: 1rem;
-  opacity: 0.8;
+  opacity: .8;
 }
 
 .social-links {
@@ -266,32 +266,15 @@ footer {
   color: var(--text-color);
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255 255 255 / .3);
   border-radius: 4px;
-  transition: all 0.2s ease;
+  transition: all .2s ease;
   font-size: 1.1rem;
 }
 
 .social-links a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255 255 255 / .1);
   transform: translateY(-2px);
-}
-
-/* Simplified animation for the logo */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.animate-logo {
-  animation: pulse 5s infinite ease-in-out;
 }
 
 .artists-grid {
@@ -302,11 +285,11 @@ footer {
 }
 
 .artist-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255 255 255 / .08);
   border-radius: 8px;
   padding: 1.5rem;
-  transition: all 0.2s ease;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all .2s ease;
+  border: 1px solid rgba(255 255 255 / .15);
   color: var(--text-color);
   text-decoration: none;
   display: block;
@@ -314,8 +297,8 @@ footer {
 
 .artist-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0 0 0 / .05);
+  border-color: rgba(255 255 255 / .2);
   text-decoration: none;
   color: var(--text-color);
 }
@@ -329,17 +312,16 @@ footer {
 .artist-name {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 .artist-role {
   font-size: 1.1rem;
-  opacity: 0.9;
+  opacity: .9;
   font-weight: 400;
 }
 
 .special-text {
-  font-family: "Euripides", monospace;
   letter-spacing: 1.5px;
   font-size: 1.4rem;
   font-weight: 600;
@@ -362,12 +344,11 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-
   .program-container {
     flex-direction: column;
   }
 
-  .program-card {
+  .card {
     flex: 1 1 100%;
   }
 
@@ -383,11 +364,11 @@ footer {
     font-size: 1.2rem;
   }
 
-  .program-card h3 {
+  .card h3 {
     font-size: 1.8rem;
   }
 
-  .program-card h4 {
+  .card h4 {
     font-size: 1.6rem;
   }
 
@@ -433,5 +414,8 @@ footer {
 @media (max-width: 1200px) {
   .nav {
     display: none;
+  }
+  h1 {
+    animation: pulse 10s infinite ease-in-out;
   }
 }
