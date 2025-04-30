@@ -64,28 +64,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body id="top">
-
+    <!-- Original Nav for large screens -->
     <nav class="nav">
       <a href="#top">Top</a>
       <a href="#about">About</a>
-      <a href="#artists">Artists &amp; Facilitators</a>
+      <a href="#artists">Artists & Facilitators</a>
       <a href="#programs">Programs</a>
       <a href="#experience">The Experience</a>
       <a href="#tickets">Tickets</a>
     </nav>
 
+    <!-- Fullscreen Menu container for small screens -->
+    <div id="fullscreen-menu">
+      <nav class="fullscreen-nav-links">
+        <a href="#about">About</a>
+        <a href="#artists">Artists & Facilitators</a>
+        <a href="#programs">Programs</a>
+        <a href="#experience">The Experience</a>
+        <a href="#tickets">Tickets</a>
+      </nav>
+    </div>
+
     <header>
       <div class="container">
-        <div class="logo-container animate-logo"></div>
         <h1>⟢ Everything Festival ⟢</h1>
         <div class="date-time">Sunday May 4th, 2025 • 10am to 10pm</div>
-        <a href="https://maps.app.goo.gl/WXX4tVWpiXdRLQLi7" target="_blank" title="Open in Google Maps">
+        <a
+          href="https://maps.app.goo.gl/WXX4tVWpiXdRLQLi7"
+          target="_blank"
+          title="Open in Google Maps"
+        >
           <p>Chau. de Zellik 65, 1082 Berchem-Sainte-Agathe</p>
         </a>
         <div class="tagline">
           Bodies in Space presents a one-day festival of rhythm, rest, and resonance
         </div>
-        <a href="https://ypl.me/Ib7/t" class="btn" target="_blank" style="margin:1rem">
+        <a href="https://ypl.me/Ib7/t" class="btn" target="_blank" style="margin: 1rem">
           Buy Tickets
         </a>
         <div class="special-text">✦⟢༚☾🌀⟢☼༚✦</div>
@@ -104,8 +118,8 @@
         <h2 class="section-title">About</h2>
         <div class="manifesto">
           <p>
-            Bodies in Space is delighted to kick off the first edition of<br>
-            ⟢ everything festival ⟢<br>
+            Bodies in Space is delighted to kick off the first edition of<br />
+            ⟢ everything festival ⟢<br />
             a full day of programming centered on community co-creation, restorative
             practices, and freaky frequency exploration.
           </p>
@@ -185,11 +199,7 @@
             <div class="artist-name">ROTA</div>
             <div class="artist-role">A/V installations</div>
           </a>
-          <a
-            href="https://rebelup.org"
-            target="_blank"
-            class="artist-card"
-          >
+          <a href="https://rebelup.org" target="_blank" class="artist-card">
             <span class="artist-emoji">⟢</span>
             <div class="artist-name">Rebel Up</div>
             <div class="artist-role">DJ set</div>
@@ -313,8 +323,8 @@
                 <div class="program-title">Ouraganutan</div>
               </div>
             </div>
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
-              <p style="margin-top: 2rem; margin-bottom: 2rem;">Live</p>
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.2)">
+              <p style="margin-top: 2rem; margin-bottom: 2rem">Live</p>
               <div class="program-item">
                 <div class="program-title">NiXiE</div>
               </div>
@@ -324,7 +334,11 @@
                 <div class="program-title">Rafael Aragon</div>
                 <div class="program-title">Dragan Marković</div>
                 <div class="program-description">
-                    WOMB is an intimate and immersive musical event that put the emphasis on contemplative listening rather than dancing, to highlight other forms of sonic expression and explore other functions of music. Resident artists Dragan Marković & Rafael Aragon will each perform experimental live sets.
+                  WOMB is an intimate and immersive musical event that put the emphasis on
+                  contemplative listening rather than dancing, to highlight other forms of
+                  sonic expression and explore other functions of music. Resident artists
+                  Dragan Marković & Rafael Aragon will each perform experimental live
+                  sets.
                 </div>
               </div>
 
@@ -332,7 +346,11 @@
                 <h5>CLOSING CEREMONY</h5>
                 <div class="program-title">ROTA</div>
                 <div class="program-description">
-                  A multidisciplinary art collective bringing together their craft to present immersive audiovisual experiences. Experimenting with different mediums, they seek to convey their fascination with the primal experience of perception and being, inviting perceivers into the dreamworlds of the subconscious full of childlike wonder.
+                  A multidisciplinary art collective bringing together their craft to
+                  present immersive audiovisual experiences. Experimenting with different
+                  mediums, they seek to convey their fascination with the primal
+                  experience of perception and being, inviting perceivers into the
+                  dreamworlds of the subconscious full of childlike wonder.
                 </div>
               </div>
             </div>
@@ -414,9 +432,7 @@
             If you feel called to give more, we welcome it. But mostly we're just glad
             you'll be with us.
           </p>
-          <a href="https://ypl.me/Ib7/t" class="btn" target="_blank">
-            Buy Tickets
-          </a>
+          <a href="https://ypl.me/Ib7/t" class="btn" target="_blank"> Buy Tickets </a>
         </div>
       </div>
     </section>
@@ -569,6 +585,68 @@
           card.style.transform = "translateY(0)";
         });
       });
+    </script>
+    <button id="burger-button" aria-label="Toggle menu" aria-expanded="false">⁂</button>
+
+    <script>
+      const burgerButton = document.getElementById("burger-button");
+      const fullscreenMenu = document.getElementById("fullscreen-menu");
+      const menuLinks = fullscreenMenu.querySelectorAll(".fullscreen-nav-links a");
+      let isSpinningClockwise = true; // Track spin direction
+
+      burgerButton.addEventListener("click", () => {
+        // Remove any existing spin classes first to reset
+        burgerButton.classList.remove("spinning-clockwise", "spinning-counter-clockwise");
+
+        // Add the correct spinning class based on the current direction
+        if (isSpinningClockwise) {
+          burgerButton.classList.add("spinning-clockwise");
+        } else {
+          burgerButton.classList.add("spinning-counter-clockwise");
+        }
+        // Toggle direction for the next click
+        isSpinningClockwise = !isSpinningClockwise;
+
+        // Toggle menu state
+        const isExpanded = burgerButton.getAttribute("aria-expanded") === "true";
+        burgerButton.setAttribute("aria-expanded", !isExpanded);
+        fullscreenMenu.classList.toggle("open");
+      });
+
+      // Remove both spinning classes after the animation completes
+      burgerButton.addEventListener("animationend", () => {
+        burgerButton.classList.remove("spinning-clockwise", "spinning-counter-clockwise");
+      });
+
+      // Add event listeners to each menu link to close the menu on click
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          // Check if the menu is open before trying to close it
+          if (fullscreenMenu.classList.contains("open")) {
+            burgerButton.setAttribute("aria-expanded", "false");
+            if (isSpinningClockwise) {
+              burgerButton.classList.add("spinning-clockwise");
+            } else {
+              burgerButton.classList.add("spinning-counter-clockwise");
+            }
+            // Toggle direction for the next click
+            isSpinningClockwise = !isSpinningClockwise;
+            fullscreenMenu.classList.remove("open");
+          }
+          // Allow default link behavior to scroll to section
+        });
+      });
+
+      // Close menu if user clicks outside the menu area (optional but good UX)
+      // Note: This simple version might close if clicking the button itself again.
+      // A more robust solution would check if the click target is outside the menu *and* not the button.
+      // document.addEventListener('click', (event) => {
+      //   if (fullscreenMenu.classList.contains('open') && !fullscreenMenu.contains(event.target) && event.target !== burgerButton) {
+      //      burgerButton.setAttribute('aria-expanded', 'false');
+      //      fullscreenMenu.classList.remove('open');
+      //      document.body.classList.remove('no-scroll');
+      //   }
+      // });
     </script>
   </body>
 </html>
